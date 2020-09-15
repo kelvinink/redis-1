@@ -5176,6 +5176,11 @@ int iAmMaster(void) {
 
 
 int main(int argc, char **argv) {
+    printf("###############################\n");
+    printf("hello world kelvin \n");
+    printf("how are you\n");
+    printf("###############################\n");
+
     struct timeval tv;
     int j;
 
