@@ -36,4 +36,4 @@ Makefile.dep
 .idea/*
 .ccls
 .ccls-cache/*
-compile_commands.json
+dump.rdb
