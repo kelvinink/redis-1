@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="redis" targetName="redis" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1580fc58-11bd-4647-9b4b-bd6e2b6ad579" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CompDBLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="redis" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="redis" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1600078426698" />
+        <entry key="$PROJECT_DIR$/compile_commands.json" value="632155652" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="unstable" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hUtADpjsVGRXm8MpYbg9g2qVt8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
+  </component>
+  <component name="RunManager" selected="CMake Application.redis-server">
+    <configuration name="devbox" type="CLion_Remote" remoteCommand="tcp:10.227.20.160:4321" symbolFile="" sysroot="">
+      <pathMapping remote=":/home/liangzhihao.zhihao/personal/redis" local="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="redis-server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="redis" TARGET_NAME="redis" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/src/redis-server">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.redis-server" />
+      <item itemvalue="GDB Remote Debug.devbox" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1580fc58-11bd-4647-9b4b-bd6e2b6ad579" name="Default Changelist" comment="" />
+      <created>1600077352382</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600077352382</updated>
+      <workItem from="1600077353838" duration="226000" />
+      <workItem from="1600078467344" duration="5966000" />
+      <workItem from="1600090425819" duration="9574000" />
+    </task>
+    <task id="LOCAL-00001" summary="kelvin: Add debugging info">
+      <created>1600157228061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600157228061</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="kelvin: Add debugging info" />
+    <option name="LAST_COMMIT_MESSAGE" value="kelvin: Add debugging info" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1530" y="-121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600158502338">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1530" y="-121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158502338" />
+    <state x="-1254" y="78" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600158086582">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1254" y="78" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158086582" />
+    <state x="-1242" y="-3" key="#redis" timestamp="1600158059205">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1242" y="-3" key="#redis/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158059205" />
+    <state x="-1181" y="146" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600085383017">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1181" y="146" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600085383017" />
+    <state x="-1354" y="-129" key="CommitChangelistDialog2" timestamp="1600157227548">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1354" y="-129" key="CommitChangelistDialog2/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600157227548" />
+    <state x="-1775" y="-160" width="1676" height="857" key="DiffContextDialog" timestamp="1600157166331">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1775" y="-160" width="1676" height="857" key="DiffContextDialog/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600157166331" />
+    <state width="1834" height="197" key="GridCell.Tab.0.bottom" timestamp="1600158155790">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="1834" height="197" key="GridCell.Tab.0.bottom/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158155790" />
+    <state width="1834" height="197" key="GridCell.Tab.0.center" timestamp="1600158155789">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="1834" height="197" key="GridCell.Tab.0.center/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158155789" />
+    <state width="1834" height="197" key="GridCell.Tab.0.left" timestamp="1600158155788">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="1834" height="197" key="GridCell.Tab.0.left/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158155788" />
+    <state width="1834" height="197" key="GridCell.Tab.0.right" timestamp="1600158155789">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="1834" height="197" key="GridCell.Tab.0.right/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158155789" />
+    <state width="1834" height="197" key="GridCell.Tab.1.bottom" timestamp="1600158155792">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="1834" height="197" key="GridCell.Tab.1.bottom/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158155792" />
+    <state width="1834" height="197" key="GridCell.Tab.1.center" timestamp="1600158155791">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="1834" height="197" key="GridCell.Tab.1.center/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158155791" />
+    <state width="1834" height="197" key="GridCell.Tab.1.left" timestamp="1600158155790">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="1834" height="197" key="GridCell.Tab.1.left/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158155790" />
+    <state width="1834" height="197" key="GridCell.Tab.1.right" timestamp="1600158155791">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="1834" height="197" key="GridCell.Tab.1.right/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600158155791" />
+    <state x="-1349" y="18" key="IDE.errors.dialog" timestamp="1600090603736">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1349" y="18" key="IDE.errors.dialog/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600090603736" />
+    <state width="640" height="197" key="ImportCMakeProjectWizard.bottomPanel" timestamp="1600090411365">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="640" height="197" key="ImportCMakeProjectWizard.bottomPanel/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600090411365" />
+    <state width="640" height="461" key="ImportCMakeProjectWizard.topPanel" timestamp="1600090411365">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state width="640" height="461" key="ImportCMakeProjectWizard.topPanel/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600090411365" />
+    <state x="-1459" y="-97" key="SettingsEditor" timestamp="1600090360802">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1459" y="-97" key="SettingsEditor/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600090360802" />
+    <state x="-1388" y="11" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1600138889470">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1388" y="11" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600138889470" />
+    <state x="-1280" y="25" width="683" height="486" key="find.popup" timestamp="1600088132363">
+      <screen x="-1876" y="-260" width="1876" height="1057" />
+    </state>
+    <state x="-1280" y="25" width="683" height="486" key="find.popup/0.23.1440.877/-1876.-260.1876.1057@-1876.-260.1876.1057" timestamp="1600088132363" />
+  </component>
+</project>
