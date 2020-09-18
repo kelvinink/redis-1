@@ -3015,6 +3015,9 @@ static void daemonize(void) {
 }
 
 int main(int argc, char **argv) {
+    printf("################################\n");
+    printf("hello kelvin\n");
+    printf("################################\n");
     initServerConfig();
     if (argc == 2) {
         ResetServerSaveParams();
