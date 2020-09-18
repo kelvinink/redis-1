@@ -1,0 +1,128 @@
+[
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "adlist.c"
+  ],
+  "file": "adlist.c"
+ },
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "ae.c"
+  ],
+  "file": "ae.c"
+ },
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "anet.c"
+  ],
+  "file": "anet.c"
+ },
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "dict.c"
+  ],
+  "file": "dict.c"
+ },
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "redis.c"
+  ],
+  "file": "redis.c"
+ },
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "sds.c"
+  ],
+  "file": "sds.c"
+ },
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "zmalloc.c"
+  ],
+  "file": "zmalloc.c"
+ },
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "benchmark.c"
+  ],
+  "file": "benchmark.c"
+ },
+ {
+  "directory": "/Users/bytedance/Documents/personal/redis_old",
+  "arguments": [
+   "cc",
+   "-c",
+   "-O2",
+   "-Wall",
+   "-W",
+   "-DSDS_ABORT_ON_OOM",
+   "-g",
+   "redis-cli.c"
+  ],
+  "file": "redis-cli.c"
+ }
+]

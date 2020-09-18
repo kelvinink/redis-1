@@ -1,0 +1,9 @@
+*.o
+.idea/
+.vscode/*
+cmake-build-debug/*
+deps/*
+redis-benchmark
+redis-cli
+redis-server
+*.DS_Store
