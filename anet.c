@@ -43,6 +43,8 @@
 
 #include "anet.h"
 
+// Socket的更多信息这里有：https://man7.org/linux/man-pages/man7/socket.7.html
+
 static void anetSetError(char *err, const char *fmt, ...)
 {
     va_list ap;
@@ -60,19 +62,24 @@ int anetNonBlock(char *err, int fd)
     /* Set the socket nonblocking.
      * Note that fcntl(2) for F_GETFL and F_SETFL can't be
      * interrupted by a signal. */
+
+    // 常规操作，先F_GETFL，再F_SETFL
     if ((flags = fcntl(fd, F_GETFL)) == -1) {
         anetSetError(err, "fcntl(F_GETFL): %s\n", strerror(errno));
         return ANET_ERR;
     }
+
     if (fcntl(fd, F_SETFL, flags | O_NONBLOCK) == -1) {
         anetSetError(err, "fcntl(F_SETFL,O_NONBLOCK): %s\n", strerror(errno));
         return ANET_ERR;
     }
+
     return ANET_OK;
 }
 
 int anetTcpNoDelay(char *err, int fd)
 {
+    // TCP_NODELAY关闭nagle's algorithm
     int yes = 1;
     if (setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, &yes, sizeof(yes)) == -1)
     {
@@ -84,6 +91,7 @@ int anetTcpNoDelay(char *err, int fd)
 
 int anetSetSendBuffer(char *err, int fd, int buffsize)
 {
+    // 设置SO_SNDBUF的大小
     if (setsockopt(fd, SOL_SOCKET, SO_SNDBUF, &buffsize, sizeof(buffsize)) == -1)
     {
         anetSetError(err, "setsockopt SO_SNDBUF: %s\n", strerror(errno));
@@ -94,6 +102,7 @@ int anetSetSendBuffer(char *err, int fd, int buffsize)
 
 int anetTcpKeepAlive(char *err, int fd)
 {
+    // 打开SO_KEEPALIVE
     int yes = 1;
     if (setsockopt(fd, SOL_SOCKET, SO_KEEPALIVE, &yes, sizeof(yes)) == -1) {
         anetSetError(err, "setsockopt SO_KEEPALIVE: %s\n", strerror(errno));
@@ -165,16 +174,19 @@ static int anetTcpGenericConnect(char *err, char *addr, int port, int flags)
     return s;
 }
 
+// kelvin: blocking版本
 int anetTcpConnect(char *err, char *addr, int port)
 {
     return anetTcpGenericConnect(err,addr,port,ANET_CONNECT_NONE);
 }
 
+// kelvin: nonblocking版本
 int anetTcpNonBlockConnect(char *err, char *addr, int port)
 {
     return anetTcpGenericConnect(err,addr,port,ANET_CONNECT_NONBLOCK);
 }
 
+// kelvin: 除非EOF或发生错误，一定会读count字节
 /* Like read(2) but make sure 'count' is read before to return
  * (unless error or EOF condition is encountered) */
 int anetRead(int fd, void *buf, int count)
@@ -190,6 +202,8 @@ int anetRead(int fd, void *buf, int count)
     return totlen;
 }
 
+
+// kelvin: 除非EOF或发生错误，一定会写count字节
 /* Like write(2) but make sure 'count' is read before to return
  * (unless error is encountered) */
 int anetWrite(int fd, void *buf, int count)
@@ -209,20 +223,26 @@ int anetTcpServer(char *err, int port, char *bindaddr)
 {
     int s, on = 1;
     struct sockaddr_in sa;
-    
+
+    // 新建个stream socket
     if ((s = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
         anetSetError(err, "socket: %s\n", strerror(errno));
         return ANET_ERR;
     }
+
+    // 设置socket的属性
     if (setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &on, sizeof(on)) == -1) {
         anetSetError(err, "setsockopt SO_REUSEADDR: %s\n", strerror(errno));
         close(s);
         return ANET_ERR;
     }
+
+    // 常规的sa设置
     memset(&sa,0,sizeof(sa));
     sa.sin_family = AF_INET;
     sa.sin_port = htons(port);
     sa.sin_addr.s_addr = htonl(INADDR_ANY);
+
     if (bindaddr) {
         if (inet_aton(bindaddr, &sa.sin_addr) == 0) {
             anetSetError(err, "Invalid bind address\n");
@@ -230,11 +250,15 @@ int anetTcpServer(char *err, int port, char *bindaddr)
             return ANET_ERR;
         }
     }
+
+    // bind
     if (bind(s, (struct sockaddr*)&sa, sizeof(sa)) == -1) {
         anetSetError(err, "bind: %s\n", strerror(errno));
         close(s);
         return ANET_ERR;
     }
+
+    // listen
     if (listen(s, 32) == -1) {
         anetSetError(err, "listen: %s\n", strerror(errno));
         close(s);
@@ -249,8 +273,11 @@ int anetAccept(char *err, int serversock, char *ip, int *port)
     struct sockaddr_in sa;
     unsigned int saLen;
 
+    // 循环监听
     while(1) {
         saLen = sizeof(sa);
+
+        // accept
         fd = accept(serversock, (struct sockaddr*)&sa, &saLen);
         if (fd == -1) {
             if (errno == EINTR)
@@ -262,7 +289,9 @@ int anetAccept(char *err, int serversock, char *ip, int *port)
         }
         break;
     }
+
     if (ip) strcpy(ip,inet_ntoa(sa.sin_addr));
     if (port) *port = ntohs(sa.sin_port);
+
     return fd;
 }
