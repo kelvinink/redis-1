@@ -42,11 +42,17 @@ typedef void aeEventFinalizerProc(struct aeEventLoop *eventLoop, void *clientDat
 
 /* File event structure */
 typedef struct aeFileEvent {
+    // 该file event的fd
     int fd;
+    // mask用来标记AE event
     int mask; /* one of AE_(READABLE|WRITABLE|EXCEPTION) */
+    // 处理该file event的函数
     aeFileProc *fileProc;
+    // 处理完file event后的处理函数
     aeEventFinalizerProc *finalizerProc;
+    // clientData用来存放client要用到的数据
     void *clientData;
+    // next指向下一个file event
     struct aeFileEvent *next;
 } aeFileEvent;
 
