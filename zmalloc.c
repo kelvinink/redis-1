@@ -31,8 +31,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Global variable，记录已经使用的内存大小
 static size_t used_memory = 0;
 
+// 申请大小为size的内存，并且在这块内存的前面有个size_t记录其大小
+// 更新used_memory
 void *zmalloc(size_t size) {
     void *ptr = malloc(size+sizeof(size_t));
 
@@ -41,6 +44,8 @@ void *zmalloc(size_t size) {
     return ptr+sizeof(size_t);
 }
 
+// 重新申请大小为size内存，当然前面也会有个size_t记录这块内存的大小
+// 更新used_memory
 void *zrealloc(void *ptr, size_t size) {
     void *realptr;
     size_t oldsize;
@@ -58,6 +63,8 @@ void *zrealloc(void *ptr, size_t size) {
     return newptr+sizeof(size_t);
 }
 
+// 释放ptr所指向的内存，ptr指向的地方是分配的内存，这里我们要把前面的size_t也释放掉
+// 更新used_memory
 void zfree(void *ptr) {
     void *realptr;
     size_t oldsize;
@@ -69,6 +76,7 @@ void zfree(void *ptr) {
     free(realptr);
 }
 
+// duplicate现在s所指向的字符串，针对char *类型
 char *zstrdup(const char *s) {
     size_t l = strlen(s)+1;
     char *p = zmalloc(l);
@@ -77,6 +85,7 @@ char *zstrdup(const char *s) {
     return p;
 }
 
+// 返回已经分配使用的内存大小
 size_t zmalloc_used_memory(void) {
     return used_memory;
 }
