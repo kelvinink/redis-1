@@ -34,7 +34,7 @@
 // Global variable，记录已经使用的内存大小
 static size_t used_memory = 0;
 
-// 申请大小为size的内存，并且在这块内存的前面有个size_t记录其大小
+// 申请大小为size的内存，并且在这块内存的前面增加个size_t的integer记录其大小
 // 更新used_memory
 void *zmalloc(size_t size) {
     void *ptr = malloc(size+sizeof(size_t));
@@ -44,7 +44,7 @@ void *zmalloc(size_t size) {
     return ptr+sizeof(size_t);
 }
 
-// 重新申请大小为size内存，当然前面也会有个size_t记录这块内存的大小
+// 重新申请大小为size内存，当然前面也会有个size_t的integer记录这块内存的大小
 // 更新used_memory
 void *zrealloc(void *ptr, size_t size) {
     void *realptr;
@@ -63,7 +63,7 @@ void *zrealloc(void *ptr, size_t size) {
     return newptr+sizeof(size_t);
 }
 
-// 释放ptr所指向的内存，ptr指向的地方是分配的内存，这里我们要把前面的size_t也释放掉
+// 释放ptr所指向的内存，ptr指向的地方是分配的内存，这里我们要把前面的size_t的integer也释放掉
 // 更新used_memory
 void zfree(void *ptr) {
     void *realptr;
