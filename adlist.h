@@ -33,21 +33,25 @@
 
 /* Node, List, and Iterator are the only data structures used currently. */
 
+// 非常常规的list node定义，跟leetcode的差不多哈哈
+// value值为void*，方便适应任何类型
 typedef struct listNode {
     struct listNode *prev;
     struct listNode *next;
     void *value;
 } listNode;
 
+// 由listNode构建起来的链表
 typedef struct list {
     listNode *head;
     listNode *tail;
-    void *(*dup)(void *ptr);
-    void (*free)(void *ptr);
-    int (*match)(void *ptr, void *key);
-    unsigned int len;
+    void *(*dup)(void *ptr);              // 复制value的函数
+    void (*free)(void *ptr);              // 释放value的函数
+    int (*match)(void *ptr, void *key);   // match function，比较key和value的值
+    unsigned int len;                     // list的长度，注意适应unsigned，因为长度不可能为负数
 } list;
 
+// Iterator，可以从头到尾或者从尾到头
 typedef struct listIter {
     listNode *next;
     listNode *prev;
